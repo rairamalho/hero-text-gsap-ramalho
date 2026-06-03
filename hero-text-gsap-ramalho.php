@@ -4,7 +4,7 @@
  * Plugin URI:        https://github.com/rairamalho/hero-text-gsap-ramalho
  * Description:       Animated hero section Gutenberg block with GSAP SplitText, ScrollTrigger and multiple animation modes.
  * Version:           1.0.0
- * Requires at least: 6.5
+ * Requires at least: 6.6
  * Requires PHP:      8.2
  * Author:            Raimundo Ramalho
  * Author URI:        https://github.com/rairamalho

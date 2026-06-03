@@ -1,7 +1,7 @@
 # GSAP Hero Block
 
 ![PHP](https://img.shields.io/badge/PHP-8.2%2B-777BB4?logo=php&logoColor=white)
-![WordPress](https://img.shields.io/badge/WordPress-6.5%2B-21759B?logo=wordpress&logoColor=white)
+![WordPress](https://img.shields.io/badge/WordPress-6.6%2B-21759B?logo=wordpress&logoColor=white)
 ![GSAP](https://img.shields.io/badge/GSAP-3.12-88CE02?logo=greensock&logoColor=white)
 ![License](https://img.shields.io/badge/License-GPL%20v2-blue)
 
@@ -76,9 +76,9 @@ ScrollTrigger.create({
 | Requirement | Version |
 |-------------|---------|
 | PHP | 8.2+ |
-| WordPress | 6.5+ |
-| Node.js | 18+ |
-| npm | 9+ |
+| WordPress | 6.6+ |
+| Node.js | 20+ |
+| npm | 10+ |
 
 ---
 
@@ -171,6 +171,8 @@ hero-text-gsap-ramalho/
 - **viewScript** in `block.json` — `frontend.js` (GSAP bundle ~130 KB) only enqueues on pages where the block is present, never in the editor.
 - **CSS split** — `style.scss` (frontend styles) → `build/style-frontend.css` (loads editor + frontend via `style`). `editor.scss` (editor overrides) → `build/index.css` (loads editor only via `editorStyle`).
 - **GSAP 3.12** npm package includes SplitText, ScrambleTextPlugin, and ScrollTrigger at no extra cost.
+- **Autoload** — Composer uses `classmap` (not PSR-4) so WordPress-style `class-*.php` filenames are resolved correctly without renaming files.
+- **WP 6.6+ minimum** — `@wordpress/scripts` v32 outputs JSX using the new React transform (`react/jsx-runtime`), which WordPress only ships as a registered asset from 6.6 onward.
 
 ---
 
