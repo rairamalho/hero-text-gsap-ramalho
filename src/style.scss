@@ -1,0 +1,76 @@
+.gsap-hero {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	overflow: hidden;
+
+	// Vertical alignment via flexbox
+	&--v-top    { justify-content: flex-start; }
+	&--v-center { justify-content: center; }
+	&--v-bottom { justify-content: flex-end; }
+
+	&__media {
+		position: absolute;
+		inset: 0;
+		z-index: 1;
+
+		img,
+		video {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+
+		&--empty {
+			background: #1a1a1a;
+		}
+	}
+
+	&__overlay {
+		position: absolute;
+		inset: 0;
+		z-index: 2;
+		pointer-events: none;
+	}
+
+	&__content {
+		position: relative;
+		z-index: 3;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		padding: clamp(2rem, 5vw, 5rem);
+		box-sizing: border-box;
+
+		&--h-left   { align-items: flex-start; text-align: left; }
+		&--h-center { align-items: center;      text-align: center; }
+		&--h-right  { align-items: flex-end;    text-align: right; }
+	}
+
+	.hero-title {
+		margin: 0 0 1rem;
+		color: #fff;
+		font-size: clamp(2rem, 6vw, 5rem);
+		line-height: 1.1;
+		font-weight: 700;
+	}
+
+	.hero-subtitle {
+		margin: 0;
+		color: #fff;
+		font-size: clamp(1rem, 2.5vw, 1.5rem);
+		line-height: 1.5;
+		max-width: 60ch;
+	}
+}
+
+// Respect prefers-reduced-motion: keep elements visible, skip animation
+@media (prefers-reduced-motion: reduce) {
+	.gsap-hero [data-animation] {
+		opacity: 1 !important;
+		transform: none !important;
+	}
+}

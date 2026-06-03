@@ -1,0 +1,31 @@
+// Editor-specific overrides — never shipped to the frontend
+
+.wp-block-gsap-hero.gsap-hero {
+	// Ensure a visible minimum height even without media
+	min-height: 300px;
+
+	.gsap-hero__media--empty {
+		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		position: absolute;
+		inset: 0;
+
+		// Placeholder label inside the empty media area
+		&::after {
+			content: "Background Media";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: rgba(255, 255, 255, 0.5);
+			font-size: 1rem;
+			pointer-events: none;
+			white-space: nowrap;
+		}
+	}
+
+	// RichText placeholders need a minimum height to be clickable
+	.hero-title,
+	.hero-subtitle {
+		min-height: 1.2em;
+	}
+}

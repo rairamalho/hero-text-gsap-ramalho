@@ -1,0 +1,21 @@
+{
+	"name": "hero-text-gsap-ramalho",
+	"version": "1.0.0",
+	"description": "GSAP Hero Block — WordPress Gutenberg Plugin",
+	"private": true,
+	"scripts": {
+		"build": "wp-scripts build",
+		"start": "wp-scripts start",
+		"format": "wp-scripts format",
+		"lint:js": "wp-scripts lint-js",
+		"lint:css": "wp-scripts lint-style",
+		"packages-update": "wp-scripts packages-update"
+	},
+	"dependencies": {
+		"gsap": "^3.12.5"
+	},
+	"devDependencies": {
+		"@babel/runtime": "^7.29.7",
+		"@wordpress/scripts": "^28.0.0"
+	}
+}
